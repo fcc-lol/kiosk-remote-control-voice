@@ -1,7 +1,7 @@
 #!/bin/bash
 
 API_KEY=""
-API_URL="https://fcc-kiosk-server.noshado.ws/urls?fccApiKey=$API_KEY"
+API_URL="https://kiosk-server.fcc.lol/urls?fccApiKey=$API_KEY"
 CONFIG_FILE="/var/lib/homebridge/config.json"
 
 # Fetch data from the API
