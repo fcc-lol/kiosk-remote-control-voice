@@ -78,7 +78,7 @@ print(clean)
       switch="{
         \"id\": \"$id\",
         \"name\": \"$display_name\",
-        \"on_url\": \"https://fcc-kiosk-server.noshado.ws/change-url\",
+        \"on_url\": \"https://kiosk-server.fcc.lol/change-url\",
         \"on_method\": \"POST\",
         \"on_body\": \"{ \\\"id\\\": \\\"$id\\\", \\\"fccApiKey\\\": \\\"$API_KEY\\\" }\",
         \"on_headers\": \"{ \\\"Content-Type\\\": \\\"application/json\\\" }\"
