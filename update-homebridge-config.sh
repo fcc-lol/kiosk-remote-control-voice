@@ -1,12 +1,12 @@
 #!/bin/bash
 
 API_KEY=""
-API_URL="https://kiosk-server.fcc.lol/urls?fccApiKey=$API_KEY"
+API_BASE_URL="https://kiosk-server-bot-proxy.fcc.lol"
 CONFIG_FILE="/var/lib/homebridge/config.json"
 
 # Fetch data from the API
 fetch_data() {
-  curl -s "$API_URL"
+  curl -s "$API_BASE_URL/urls?fccApiKey=$API_KEY"
 }
 
 # Function to extract values from JSON
@@ -78,7 +78,7 @@ print(clean)
       switch="{
         \"id\": \"$id\",
         \"name\": \"$display_name\",
-        \"on_url\": \"https://kiosk-server.fcc.lol/change-url\",
+        \"on_url\": \"$API_BASE_URL/change-url\",
         \"on_method\": \"POST\",
         \"on_body\": \"{ \\\"id\\\": \\\"$id\\\", \\\"fccApiKey\\\": \\\"$API_KEY\\\" }\",
         \"on_headers\": \"{ \\\"Content-Type\\\": \\\"application/json\\\" }\"
